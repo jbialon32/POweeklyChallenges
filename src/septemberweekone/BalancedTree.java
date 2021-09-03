@@ -14,16 +14,13 @@ public class BalancedTree {
     static Node root;
 
     Node arrayToBST(int arr[], int start, int end) {
-
         if (start > end) {
             return null;
         }
 
         int mid = (start + end) / 2;
         Node node = new Node(arr[mid]);
-
         node.left = arrayToBST(arr, start, mid - 1);
-
         node.right = arrayToBST(arr, mid + 1, end);
 
         return node;
@@ -39,7 +36,6 @@ public class BalancedTree {
     }
 
     class Node {
-
         int data;
         Node left, right;
 
