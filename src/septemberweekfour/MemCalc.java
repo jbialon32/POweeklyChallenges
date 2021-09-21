@@ -61,7 +61,7 @@ public class MemCalc {
             retStr = Double.toString((currSize.doubleValue() * 1000)) + currDataUnit;
         }
 
-        if (currSize.doubleValue() > 1000 && !currDataUnit.equals("EB")) {
+        if (currSize.doubleValue() >= 1000 && !currDataUnit.equals("EB")) {
             currDataUnit = dataSizes.get(dataSizes.indexOf(currDataUnit) + 1);
             currSize = new BigDecimal(Double.toString(currSize.doubleValue() / 1000));
             currSize = currSize.setScale(2, BigDecimal.ROUND_HALF_UP);
